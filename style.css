@@ -52,6 +52,7 @@ header{
     list-style: none;
 }
 
+
 .nav-links li{
     display: inline-block;
     padding: 0px 20px;
@@ -62,6 +63,21 @@ header{
 }
 .nav-links li a:hover{
     color: #0088a9;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: black;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+
 }
 
 
@@ -140,7 +156,12 @@ header{
     max-width: 1500px;
     margin: 0 auto;
     padding: 100px 0;
-    background-color: #fff
+    background-color: #fff;
+    border: 2px solid crimson;
+    border-radius: 20px;
+    box-shadow: -15px 17px 17px rgb(247, 247, 247);
+    padding: 0  40px 0 80px ;
+    
 }
 #services .section-title{
     font-size: 4rem;
@@ -210,46 +231,51 @@ header{
 /*end of service section*/
 
 /*About section*/
-#about .about{
-    flex-direction:column-reverse;
-    text-align: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 100px 20px;
-}
-#about .div-img{
-    width: 25%;
-    padding-right: 40px;
-}
-#about .div-img img{
-    width: 75%;
-    margin-bottom: 20px;
+
+.wrapper{
+    margin: 150px auto;
+    align-items: center;
+    justify-content: center;
+    width: 900px; 
+    margin-bottom: 300px;
+    border: 3px solid black;
+    border-radius: 20px;
+    box-shadow: -15px 17px 17px rgb(247, 247, 247);
+    padding: 100px 50px 280px 50px;
 }
 
-#about .col-right{
-    width: 100%;
-
-}
-#about .col-right h1{
-    font-size:3.5rem ;
-    font-weight:500;
-    margin-bottom: 5px;
-}
-#about .col-right h2{
-    font-size: 1.8rem;
-    font-weight: 500;
-    letter-spacing: 0.2rem;
-    margin-bottom: 10px;
-}
-#about .col-right p{
-    margin-bottom: 20px;
+img{
+    max-width: 150px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    float: left;
+    border: 3px solid rgb(7, 7, 7);
+    border-radius: 10px;
+    margin-right: 15px;
+    bottom: 10px;
+    align-items: center;
 }
 
-#about .col-right .cta{
+img:hover{
+    opacity: .5;
+    transition: .9s;
+    cursor: pointer;
+}
+.text-box{
     color: black;
-    margin-bottom: 50px;
-    padding: 10px 20px;
-    font-size: 2rem;
+}
+.wrapper h1{
+    font-size: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: justify;
+    text-align: center;
+}
+.text-box p{
+    font-size: 16px;
+    padding-top: 250px;
+
 }
 
 /* End of About Section*/
@@ -268,6 +294,10 @@ header{
     width: 60%;
     background-color:rgb(20, 19, 20);
     color: #fff;
+    /*border: 3px solid black;*/
+    border-radius: 20px;
+    box-shadow: -15px 17px 17px rgb(247, 247, 247);
+    padding: 0  40px 0 80px ;
 }
 #contact .form-field{
     padding: 40px;
@@ -278,6 +308,14 @@ input{
     margin: 8px 0;
     border: 1px solid rgb(10, 10, 10);
     background-color: rgb(233, 225, 225);
+    color: black;
+}
+textarea{
+    width: 100%;
+    padding:12px 20px ;
+    margin:8px 0;
+    border: 1px solid rgb(10, 10, 10) ;
+    background-color:rgb(233, 225, 225) ;
     color: black;
 }
 .btn{
@@ -296,3 +334,76 @@ input{
     transition: 0.5s;
 }
 /*end of contact section*/
+
+@media (max-width: 640px){
+
+
+    h1{
+        font-size: 30px;
+    }
+
+    .nav-links{
+        width: auto;
+        position: unset;
+        transform: none;
+        display: flex;
+        flex-direction: column;
+
+    }
+    .img{
+        max-width: 150px;
+        display: inline-flex;
+        flex-direction:row;
+        flex-wrap: wrap;
+        float:left;
+        border: 3px solid rgb(7, 7, 7);
+        border-radius: 10px;
+        margin-right: 15px;
+    }
+    .text-box h1{
+        font-size: 50px;
+        position: absolute;
+        top: 2px;
+        bottom: 2px;
+    }
+    .text-box p{
+        font-size: 12px;}
+
+        .wrapper{
+            margin: 150px auto;
+            align-items: center;
+            justify-content: center;
+            width: 250px; 
+            margin-bottom: 300px;
+            border: 3px solid black;
+            border-radius: 20px;
+            box-shadow: -15px 17px 17px rgb(247, 247, 247);
+            padding: 100px 50px 280px 50px;
+        }
+
+        #services .services{
+            flex-direction: column;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 0;
+            background-color: #fff;
+            border: 2px solid rgb(7, 7, 7);
+            border-radius: 20px;
+            box-shadow: -15px 17px 17px rgb(247, 247, 247);
+            padding: 0  40px 0 80px ;
+            
+        }
+
+        #contact .form-title{
+            color: #5a2a2a;
+            text-align: center;
+            padding: 30px;
+            font-weight: bolder;
+            font-size:large;
+        }
+
+        
+    
+ 
+    }
